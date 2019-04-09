@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6733c19d-5366-4479-bc03-435764acd6f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../mymodule/controllers/front/display.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodule/css/mymodule.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodule/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodule/mymodule.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodule/views/templates/front/display.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodule/views/templates/hook/mymodule.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/cache/ps_banner/1/1/8/2a/8a/ad/2a8aad159aeaf8d7ca7c76a85cf35263c62f0885.psbannerpsbanner.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/cache/ps_customtext/1/1/8/ab/63/70/ab6370c578c39b22e5d0d937d591c23e534b56e7.pscustomtextpscustomtext..php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/cache/ps_featuredproducts/1/1/8/b0/50/b7/b050b7adf38767469dba646d7e82f9dc60e5f1fe.psfeaturedproductsviewste.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/cache/ps_imageslider/1/1/8/e4/45/c2/e445c276c1f1363e1f89f928b8806caaa5d59107.psimagesliderviewstemplat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/64/03/40/64034093fbda864710a2c0f526b37f921e53ee39_2.module.psbannerpsbanner.tpl.cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/6c/21/08/6c2108a17c7103b6e203f4f0621d4645b56b0114_2.module.psimagesliderviewstemplat.cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/83/dd/6d/83dd6d762f92abec44acc92522c8360f5dd88507_2.file.product.tpl.cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/86/54/b2/8654b2ba7ef103395c5eb0a4a12ed7463d291bc8_2.module.pscustomtextpscustomtext..cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/a1/9d/a9/a19da90bb0d2f351465614efa190639de9088b60_2.file.variant-links.tpl.cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/fa/6c/c3/fa6cc378d2942c8857b89d6bca728048c0caeedd_2.module.psfeaturedproductsviewste.cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../var/cache/prod/smarty/compile/layouts_layout_full_width_tpl/70/f8/83/70f88320c8cf392322535e28deee04b8f104cd38_2.file.index.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduletest.php" beforeDir="false" afterPath="$PROJECT_DIR$/moduletest.php" afterDir="false" />
+    <list default="true" id="6733c19d-5366-4479-bc03-435764acd6f7" name="Default Changelist" comment="Création de construct()">
+      <change afterPath="$PROJECT_DIR$/moduletest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moduletest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="221">
+              <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -116,12 +98,20 @@
       <option name="presentableId" value="Default" />
       <updated>1554726814801</updated>
       <workItem from="1554726815956" duration="996000" />
-      <workItem from="1554795605957" duration="750000" />
+      <workItem from="1554795605957" duration="1001000" />
     </task>
+    <task id="LOCAL-00001" summary="Création de construct()">
+      <created>1554796672244</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554796672244</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1746000" />
+    <option name="totallyTimeSpent" value="1997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -130,6 +120,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18590604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -151,11 +142,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Création de construct()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Création de construct()" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/moduletest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="221">
+          <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
         </state>
       </provider>
     </entry>

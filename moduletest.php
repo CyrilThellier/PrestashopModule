@@ -43,4 +43,14 @@ class ModuleTest extends Module{
 
         return true;
     }
+    public function uninstall()
+    {
+        if (!parent::uninstall() ||
+            !Configuration::deleteByName('MYMODULE_NAME')
+        ) {
+            return false;
+        }
+
+        return true;
+    }
 }
