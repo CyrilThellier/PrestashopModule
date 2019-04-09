@@ -53,14 +53,7 @@ class ModuleTest extends Module{
 
     public function hookDisplayHome(array $params)
     {
-        $this->context->smarty->assign(
-            [
-                'my_module_name' => Configuration::get('MYMODULE_NAME'),
-                'my_module_link' => $this->context->link->getModuleLink('moduletest', 'indexController'),
-                'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
-            ]);
 
-        return $this->display(__FILE__, 'moduletest.tpl');
     }
 
 }
