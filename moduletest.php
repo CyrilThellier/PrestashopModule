@@ -58,4 +58,30 @@ class ModuleTest extends Module{
     {
 
     }
+
+    public function hookActionAdministrationPageForm(&$hookParams)
+    {
+        $formBuilder = $hookParams['form_builder'];
+        $uploadQuotaForm = $formBuilder->get('upload_quota');
+        $uploadQuotaForm->add(
+            'avis',
+            TextType::class,
+            [
+                'id_avis' => 'Id de l avis',
+                'titre' => 'Titre de l avis',
+                'contenu' => 'L avis en soit',
+                'date_ajout' => 'Date creation avis'
+            ]
+        );
+    }
+
+    public function hookActionAdministrationPageFormSave(&$hookParams)
+    {
+        // retrieve and validate the data
+        dump($hookParams['form_data']['upload_quota']['avis']);
+
+        // if the data is invalid, populate `errors` array
+        dump($hookParams['errors']);
+    }
+
 }
