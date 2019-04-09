@@ -1,5 +1,5 @@
 <li>
-    <a href="{$base_dir}modules/moduletest/moduletest_page.php" title="{l s='Click this link' mod='moduletest'}">{l s='Click me!' mod='moduletest'}</a>
+    <a href="{$base_dir}modules/moduletest/moduletest.php" title="{l s='Click this link' mod='moduletest'}">{l s='Click me!' mod='moduletest'}</a>
 </li>
 <!-- Block moduletest -->
 <div id="moduletest_home" class="block">
