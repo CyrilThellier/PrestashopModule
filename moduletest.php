@@ -36,7 +36,7 @@ class ModuleTest extends Module{
         }
 
         if (!parent::install() ||
-            !$this.registerHook('displayHome') ||
+            !$this.registerHook('displayHome')
         ) {
             return false;
         }
@@ -54,7 +54,8 @@ class ModuleTest extends Module{
         return true;
     }
 
-    public function displayHome(array $params){
+    public function displayHome(array $params)
+    {
 
     }
 }
