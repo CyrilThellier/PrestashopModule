@@ -35,14 +35,11 @@ class ModuleTest extends Module{
             Shop::setContext(Shop::CONTEXT_ALL);
         }
 
-        if (!parent::install() ||
-            !$this.registerHook('displayHome')
-        ) {
-            return false;
-        }
-
-        return true;
+        return parent::install() &&
+            $this->registerHook('home') &&
+            Configuration::updateValue('MYMODULE_NAME');
     }
+
     public function uninstall()
     {
         if (!parent::uninstall() ||
@@ -57,29 +54,6 @@ class ModuleTest extends Module{
     public function displayHome(array $params)
     {
 
-    }
-
-    public function hookActionAdministrationPageForm(&$hookParams)
-    {
-        $formBuilder = $hookParams['form_builder'];
-        $uploadQuotaForm = $formBuilder->get('upload_quota');
-        $uploadQuotaForm->add(
-            'avis',
-            TextType::class,
-            [
-                'titre' => 'Titre de l avis',
-                'contenu' => 'L avis en soit'
-            ]
-        );
-    }
-
-    public function hookActionAdministrationPageFormSave(&$hookParams)
-    {
-        // retrieve and validate the data
-        dump($hookParams['form_data']['upload_quota']['avis']);
-
-        // if the data is invalid, populate `errors` array
-        dump($hookParams['errors']);
     }
 
 }
