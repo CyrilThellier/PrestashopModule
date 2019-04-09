@@ -12,5 +12,7 @@ class IndexController extends ModuleFrontController
                 'actions'
             )
         );
+
+        $this->setTemplate('module:moduletest/views/front/avisHasard.tpl');
     }
 }
