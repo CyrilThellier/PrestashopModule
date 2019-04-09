@@ -67,10 +67,8 @@ class ModuleTest extends Module{
             'avis',
             TextType::class,
             [
-                'id_avis' => 'Id de l avis',
                 'titre' => 'Titre de l avis',
-                'contenu' => 'L avis en soit',
-                'date_ajout' => 'Date creation avis'
+                'contenu' => 'L avis en soit'
             ]
         );
     }
