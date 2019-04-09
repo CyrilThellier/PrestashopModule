@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6733c19d-5366-4479-bc03-435764acd6f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/templates/front/avisHasard.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/front/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/front/IndexController.php" afterDir="false" />
-    </list>
+    <list default="true" id="6733c19d-5366-4479-bc03-435764acd6f7" name="Default Changelist" comment="Ajout index.php" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/templates/front/avisHasard.tpl">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -47,6 +52,7 @@
       <list>
         <option value="$PROJECT_DIR$/moduletest.php" />
         <option value="$PROJECT_DIR$/controllers/front/IndexController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -91,13 +97,6 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="moduletest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="moduletest" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -139,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554726814801</updated>
       <workItem from="1554726815956" duration="996000" />
-      <workItem from="1554795605957" duration="5127000" />
+      <workItem from="1554795605957" duration="5282000" />
     </task>
     <task id="LOCAL-00001" summary="Création de construct()">
       <created>1554796672244</created>
@@ -176,11 +175,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554799406690</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajout index.php">
+      <created>1554807194323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554807194323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6123000" />
+    <option name="totallyTimeSpent" value="6278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -217,7 +223,8 @@
     <MESSAGE value="Création de uninstall() et ajout du fichier IndexController.php qui sera utilisé pour le Hook Home" />
     <MESSAGE value="Mise en place de hook Home" />
     <MESSAGE value="Début création du controller front (+ ajout logo)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Début création du controller front (+ ajout logo)" />
+    <MESSAGE value="Ajout index.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout index.php" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/moduletest.php">
@@ -229,6 +236,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/templates/front/avisHasard.tpl">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/front/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">

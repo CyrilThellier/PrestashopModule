@@ -1,5 +1,6 @@
 <?php
-class IndexController extends ModuleFrontController
+
+class moduletestindexModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
