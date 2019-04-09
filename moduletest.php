@@ -53,4 +53,8 @@ class ModuleTest extends Module{
 
         return true;
     }
+
+    public function displayHome(array $params){
+
+    }
 }
