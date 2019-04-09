@@ -28,4 +28,19 @@ class ModuleTest extends Module{
             $this->warning = $this->l('No name provided');
         }
     }
+
+    public function install()
+    {
+        if (Shop::isFeatureActive()) {
+            Shop::setContext(Shop::CONTEXT_ALL);
+        }
+
+        if (!parent::install() ||
+            !$this.registerHook('displayHome') ||
+        ) {
+            return false;
+        }
+
+        return true;
+    }
 }
