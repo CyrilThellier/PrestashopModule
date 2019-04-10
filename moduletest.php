@@ -35,10 +35,17 @@ class ModuleTest extends Module{
             Shop::setContext(Shop::CONTEXT_ALL);
         }
 
-        return parent::install() &&
-            $this->registerHook('home') &&
-            Configuration::updateValue('MYMODULE_NAME');
+        if (!parent::install() ||
+            !$this->registerHook('leftColumn') ||
+            !$this->registerHook('header') ||
+            !Configuration::updateValue('MYMODULE_NAME', 'my friend')
+        ) {
+            return false;
+        }
+
+        return true;
     }
+
 
     public function uninstall()
     {
@@ -50,6 +57,7 @@ class ModuleTest extends Module{
 
         return true;
     }
+
 
     public function hookDisplayHome(array $params)
     {
