@@ -58,6 +58,46 @@ class ModuleTest extends Module{
         return true;
     }
 
+    public function getContent()
+    {
+        return $this->displayList();
+    }
+
+    public function displayList()
+    {
+
+        $fields_list = array(
+            'id_avis' => array(
+                'title' => $this->l('id_avis'),
+                'width' => 140,
+                'type' => 'int',
+            ),
+            'avis' => array(
+                'title' => $this->l('titre'),
+                'width' => 140,
+                'type' => 'text',
+            ),
+        );
+
+        $helper = new HelperList();
+
+        $helper->shopLinkType = '';
+
+        $helper->actions = array('edit', 'delete', 'view');
+
+        $helper->identifier = 'id_avis';
+        $helper->show_toolbar = true;
+        $helper->title = 'HelperList';
+        $helper->table =_DB_PREFIX_.$this->name;
+
+        $helper->token = Tools::getAdminTokenLite('AdminModules');
+        $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
+
+        $results = array(array('id_avis' => 1,'avis' => 'nan cest cool')); //Remplacer par appel sur la base de donnée
+
+        return $helper->generateList($results,$fields_list);
+    }
+
 
     public function hookDisplayHome(array $params)
     {
