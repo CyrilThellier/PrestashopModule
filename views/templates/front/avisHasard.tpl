@@ -1,7 +1,2 @@
-<CAPTION>Un Avis Aleatoire</CAPTION>
-<TR>
-    <TH>Titre</TH>
-</TR>
-<TR>
-    <TD>Contenu</TD>
-</TR>
+{$my_module_avis}
+{$my_module_message}

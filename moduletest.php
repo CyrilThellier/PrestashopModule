@@ -35,17 +35,10 @@ class ModuleTest extends Module{
             Shop::setContext(Shop::CONTEXT_ALL);
         }
 
-        if (!parent::install() ||
-            !$this->registerHook('leftColumn') ||
-            !$this->registerHook('header') ||
-            !Configuration::updateValue('MYMODULE_NAME', 'my friend')
-        ) {
-            return false;
-        }
-
-        return true;
+        return parent::install() &&
+            $this->registerHook('home') &&
+            Configuration::updateValue('MYMODULE_NAME', 'my friend');
     }
-
 
     public function uninstall()
     {
@@ -57,6 +50,7 @@ class ModuleTest extends Module{
 
         return true;
     }
+
 
     public function getContent()
     {
@@ -110,10 +104,20 @@ class ModuleTest extends Module{
         return $helper->generateList($results,$fields_list);
     }
 
-
-    public function hookDisplayHome(array $params)
+    public function hookDisplayHome($params)
     {
+        $query = 'SELECT titre, contenu FROM ps_avis ORDER BY RAND() LIMIT 1';
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($query);
 
+        $this->context->smarty->assign(
+            array(
+                'my_module_name' => Configuration::get('MYMODULE_NAME'),
+                'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
+                'my_module_message' => $this->l('là normalement en dessous ya un avis au pif') // Do not forget to enclose your strings in the l() translation method
+            )
+        );
+        $this->context->smarty->assign("my_module_avis",$result);
+
+        return $this->display(__FILE__, 'display.tpl');
     }
-
 }
