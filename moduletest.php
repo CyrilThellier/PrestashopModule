@@ -69,13 +69,23 @@ class ModuleTest extends Module{
         $fields_list = array(
             'id_avis' => array(
                 'title' => $this->l('id_avis'),
-                'width' => 140,
+                'width' => 70,
                 'type' => 'int',
             ),
-            'avis' => array(
+            'titre' => array(
                 'title' => $this->l('titre'),
-                'width' => 140,
+                'width' => 70,
                 'type' => 'text',
+            ),
+            'contenu' => array(
+                'title' => $this->l('contenu'),
+                'width' => 70,
+                'type' => 'text',
+            ),
+            'date_ajout' => array(
+                'title' => $this->l('date_ajout'),
+                'width' => 70,
+                'type' => date("Y/m/d"),
             ),
         );
 
@@ -83,7 +93,7 @@ class ModuleTest extends Module{
 
         $helper->shopLinkType = '';
 
-        $helper->actions = array('edit', 'delete', 'view');
+        $helper->actions = array('view', 'edit', 'delete');
 
         $helper->identifier = 'id_avis';
         $helper->show_toolbar = true;
@@ -93,7 +103,9 @@ class ModuleTest extends Module{
         $helper->token = Tools::getAdminTokenLite('AdminModules');
         $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
 
-        $results = array(array('id_avis' => 1,'avis' => 'nan cest cool')); //Remplacer par appel sur la base de donnée
+        $query = 'SELECT id_avis, titre, contenu, date_ajout FROM ps_avis';
+
+        $results = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($query);
 
         return $helper->generateList($results,$fields_list);
     }
