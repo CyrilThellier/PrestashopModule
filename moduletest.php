@@ -107,17 +107,20 @@ class ModuleTest extends Module{
     public function hookDisplayHome($params)
     {
         $query = 'SELECT titre, contenu FROM ps_avis ORDER BY RAND() LIMIT 1';
-        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($query);
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($query);
+        $titre = $result[0]['titre'];
+        $contenu = $result[0]['contenu'];
 
         $this->context->smarty->assign(
             array(
                 'my_module_name' => Configuration::get('MYMODULE_NAME'),
-                'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
-                'my_module_message' => $this->l('là normalement en dessous ya un avis au pif') // Do not forget to enclose your strings in the l() translation method
+                'my_module_link' => $this->context->link->getModuleLink('moduletest', 'display'),
+                'my_module_message' => $this->l('Avis d\'un client aléatoire'),
+                'my_module_titre' => $this->l($titre), // Do not forget to enclose your strings in the l() translation method
+                'my_module_contenu' => $this->l($contenu)
             )
         );
-        $this->context->smarty->assign("my_module_avis",$result);
 
-        return $this->display(__FILE__, 'display.tpl');
+        return $this->display(__FILE__, 'avisHasard.tpl');
     }
 }
